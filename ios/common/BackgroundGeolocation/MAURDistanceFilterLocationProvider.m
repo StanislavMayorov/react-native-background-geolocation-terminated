@@ -411,6 +411,8 @@ enum {
 {
     if (!isUpdatingLocation) {
         [locationManager startUpdatingLocation];
+        [locationManager startMonitoringSignificantLocationChanges];
+        NSLog(@"startMonitoringSignificantLocationChanges");
         isUpdatingLocation = YES;
     }
 }
